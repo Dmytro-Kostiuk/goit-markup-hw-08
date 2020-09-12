@@ -1,0 +1,15 @@
+.desc-of-work-item {
+  @include for-size(desktop) {
+    width: calc((100% - 90px) / 4);
+  }
+}
+
+.desc-of-work-item:not(:last-child) {
+  margin-bottom: 30px;
+  // margin-right: 30px;
+}
+
+.icon-title {
+  @extend %text-position;
+  text-align: center;
+}

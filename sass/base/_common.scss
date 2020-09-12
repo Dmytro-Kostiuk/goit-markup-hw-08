@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @include for-size(mobile) {
+    width: 480px;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: $general-color;
+}
+.flexbox {
+  @include for-size(desktop) {
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list {
+  display: flex;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.178;
+
+  // font-size: 36px;
+  // line-height: 1.167;
+  // margin-bottom: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $dark-color;
+}
+
+.list-work {
+  @include for-size(desktop) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.section-padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  // padding-top: 94px;
+  // padding-bottom: 94px;
+}
+
+.section-container {
+  padding-bottom: 94px;
+}
+
+.pad {
+  padding-top: 60px;
+  // padding-top: 94px;
+  padding-bottom: 60px;
+}
+.position-p {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.d-block {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+%text-position {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $dark-color;
+}
