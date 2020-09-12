@@ -1,10 +1,10 @@
-// .list-what-we-do {
-//   width: calc((100% - 60px) / 3);
-//   margin-right: 30px;
-// }
-// .list-what-we-do:nth-child(3n) {
-//   margin: 0;
-// }
+.list-what-we-do {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+}
+.list-what-we-do:nth-child(3n) {
+  margin: 0;
+}
 .what-we-do {
   display: none;
 

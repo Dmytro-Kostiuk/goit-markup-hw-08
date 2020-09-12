@@ -1,15 +1,38 @@
 .desc-of-work-item {
+  @include for-size(tablet-landscape) {
+    width: calc((100% - 30px) / 2);
+  }
+
   @include for-size(desktop) {
     width: calc((100% - 90px) / 4);
+  }
+}
+.desc-of-work-item:not(:nth-child(2n)) {
+  @include for-size(tablet-landscape) {
+    margin-right: 30px;
   }
 }
 
 .desc-of-work-item:not(:last-child) {
   margin-bottom: 30px;
-  // margin-right: 30px;
+
+  @include for-size(tablet-landscape) {
+  }
+
+  @include for-size(desktop) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
 }
 
 .icon-title {
   @extend %text-position;
   text-align: center;
+  @include for-size(tablet-landscape) {
+    text-align: start;
+  }
+
+  @include for-size(desktop) {
+    text-align: start;
+  }
 }

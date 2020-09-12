@@ -4,20 +4,26 @@
 
 .item-team-list {
   background: $white-color;
+  @include for-size(tablet-landscape) {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+  }
 
   @include for-size(desktop) {
     width: calc((100% - 90px) / 4);
-    margin-right: 30px;
   }
   &:not(:last-child) {
     margin-bottom: 30px;
+    @include for-size(tablet-landscape) {
+      margin-bottom: 0;
+    }
+    @include for-size(desktop) {
+      margin-bottom: 0;
+    }
   }
   box-shadow: 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
-  // &:nth-child(4n) {
-  //   margin-right: 0;
-  // }
   & > p {
     padding: 0;
     margin: 0;
@@ -25,6 +31,28 @@
     justify-content: center;
   }
 }
+
+.item-team-list:nth-child(4n) {
+  @include for-size(desktop) {
+    margin-right: 0;
+  }
+}
+.item-team-list:nth-child(2n) {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+    margin-right: 0;
+  }
+  // @include for-size(tablet-landscape) {
+  //   margin-right: 0;
+  // }
+}
+.item-team-list:nth-child(n + 1) {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+    margin-top: 30px;
+  }
+  @include for-size(tablet-landscape) {
+  }
+}
+
 .title-h3 {
   font-size: 16px;
   line-height: 1.1875;

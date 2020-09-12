@@ -1,6 +1,12 @@
 .page-header {
   display: none;
-
+  @include for-size(tablet-portrait) {
+  }
+  @include for-size(tablet-landscape) {
+    display: block;
+    padding: 23px 0 23px 0;
+    border: 1px solid #ececec;
+  }
   @include for-size(desktop) {
     display: block;
     padding: 24px 0 25px 0;
@@ -9,7 +15,10 @@
 }
 
 .mobile-header {
-  display: none;
+  display: block;
+  @include for-size(tablet-landscape) {
+    display: none;
+  }
 }
 
 .navigation {
@@ -44,10 +53,21 @@
 
 .contacts {
   color: $general-color;
-  display: inline-flex;
-  align-items: center;
+  @include for-size(tablet-landscape) {
+    display: flex;
+  }
+  @include for-size(desktop) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &:not(:last-child) {
-    margin-right: 30px;
+    @include for-size(tablet-landscape) {
+      margin-bottom: 10px;
+    }
+    @include for-size(desktop) {
+      margin-right: 30px;
+    }
   }
 }

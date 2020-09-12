@@ -10,8 +10,8 @@
   color: $white-color;
 
   @include for-size(desktop) {
-    // font-size: 44px;
-    // line-height: 1.36;
+    font-size: 44px;
+    line-height: 1.36;
   }
 }
 
@@ -28,7 +28,8 @@
 
   padding-top: 118px;
   padding-bottom: 118px;
-
-  // padding-top: 200px;
-  // padding-bottom: 200px;
+  @include for-size(desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
