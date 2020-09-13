@@ -1,6 +1,8 @@
 .page-header {
-  display: none;
-  @include for-size(tablet-portrait) {
+  @media screen and (max-width: $tablet) {
+    height: 60px;
+    padding: 16px 0 16px 0;
+    border: 1px solid #ececec;
   }
   @include for-size(tablet-landscape) {
     display: block;
@@ -13,10 +15,8 @@
     border: 1px solid #ececec;
   }
 }
-
-.mobile-header {
-  display: block;
-  @include for-size(tablet-landscape) {
+.hide {
+  @media screen and (max-width: $tablet - 1) {
     display: none;
   }
 }
@@ -44,7 +44,10 @@
 
     height: 4px;
     position: relative;
-    top: 32px;
+    top: 8px;
+    @include for-size(tablet-landscape) {
+      top: 32px;
+    }
 
     background: #2196f3;
     border-radius: 2px;
